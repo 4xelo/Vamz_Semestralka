@@ -10,6 +10,16 @@
 		77EBDD20281D3B9B009C4477 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD1F281D3B9B009C4477 /* AppDelegate.swift */; };
 		77EBDD29281D3B9C009C4477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD28281D3B9C009C4477 /* Assets.xcassets */; };
 		77EBDD2C281D3B9C009C4477 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD2A281D3B9C009C4477 /* LaunchScreen.storyboard */; };
+		77EBDD38281D592B009C4477 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD37281D592B009C4477 /* TabBar.storyboard */; };
+		77EBDD3C281D5A67009C4477 /* FavoritesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD3B281D5A67009C4477 /* FavoritesViewController.storyboard */; };
+		77EBDD3F281D5ADA009C4477 /* NewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD3E281D5ADA009C4477 /* NewViewController.storyboard */; };
+		77EBDD41281D5B12009C4477 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD40281D5B12009C4477 /* NewViewController.swift */; };
+		77EBDD43281D5BAF009C4477 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD42281D5BAF009C4477 /* FavoritesViewController.swift */; };
+		77EBDD46281D5C3E009C4477 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD45281D5C3E009C4477 /* SettingsViewController.storyboard */; };
+		77EBDD49281D5D1E009C4477 /* CategoriesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD48281D5D1E009C4477 /* CategoriesViewController.storyboard */; };
+		77EBDD4B281D5D2D009C4477 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD4A281D5D2D009C4477 /* CategoriesViewController.swift */; };
+		77EBDD4E281D5D6F009C4477 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD4D281D5D6F009C4477 /* HomeViewController.storyboard */; };
+		77EBDD50281D5D87009C4477 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD4F281D5D87009C4477 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +28,16 @@
 		77EBDD28281D3B9C009C4477 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77EBDD2B281D3B9C009C4477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77EBDD2D281D3B9C009C4477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77EBDD37281D592B009C4477 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		77EBDD3B281D5A67009C4477 /* FavoritesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoritesViewController.storyboard; sourceTree = "<group>"; };
+		77EBDD3E281D5ADA009C4477 /* NewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewViewController.storyboard; sourceTree = "<group>"; };
+		77EBDD40281D5B12009C4477 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		77EBDD42281D5BAF009C4477 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		77EBDD45281D5C3E009C4477 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
+		77EBDD48281D5D1E009C4477 /* CategoriesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoriesViewController.storyboard; sourceTree = "<group>"; };
+		77EBDD4A281D5D2D009C4477 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		77EBDD4D281D5D6F009C4477 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		77EBDD4F281D5D87009C4477 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +92,12 @@
 		77EBDD34281D3EAE009C4477 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				77EBDD4C281D5D58009C4477 /* Home */,
+				77EBDD47281D5D06009C4477 /* Categories */,
+				77EBDD44281D5BFE009C4477 /* Settings */,
+				77EBDD3D281D5ACA009C4477 /* New */,
+				77EBDD3A281D5A47009C4477 /* Favorites */,
+				77EBDD39281D5A2F009C4477 /* Tab */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -88,6 +114,58 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		77EBDD39281D5A2F009C4477 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				77EBDD37281D592B009C4477 /* TabBar.storyboard */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		77EBDD3A281D5A47009C4477 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				77EBDD3B281D5A67009C4477 /* FavoritesViewController.storyboard */,
+				77EBDD42281D5BAF009C4477 /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		77EBDD3D281D5ACA009C4477 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				77EBDD3E281D5ADA009C4477 /* NewViewController.storyboard */,
+				77EBDD40281D5B12009C4477 /* NewViewController.swift */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		77EBDD44281D5BFE009C4477 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				77EBDD45281D5C3E009C4477 /* SettingsViewController.storyboard */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		77EBDD47281D5D06009C4477 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				77EBDD48281D5D1E009C4477 /* CategoriesViewController.storyboard */,
+				77EBDD4A281D5D2D009C4477 /* CategoriesViewController.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		77EBDD4C281D5D58009C4477 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				77EBDD4D281D5D6F009C4477 /* HomeViewController.storyboard */,
+				77EBDD4F281D5D87009C4477 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,8 +226,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77EBDD49281D5D1E009C4477 /* CategoriesViewController.storyboard in Resources */,
 				77EBDD2C281D3B9C009C4477 /* LaunchScreen.storyboard in Resources */,
+				77EBDD38281D592B009C4477 /* TabBar.storyboard in Resources */,
+				77EBDD3F281D5ADA009C4477 /* NewViewController.storyboard in Resources */,
+				77EBDD4E281D5D6F009C4477 /* HomeViewController.storyboard in Resources */,
 				77EBDD29281D3B9C009C4477 /* Assets.xcassets in Resources */,
+				77EBDD46281D5C3E009C4477 /* SettingsViewController.storyboard in Resources */,
+				77EBDD3C281D5A67009C4477 /* FavoritesViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +244,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77EBDD50281D5D87009C4477 /* HomeViewController.swift in Sources */,
 				77EBDD20281D3B9B009C4477 /* AppDelegate.swift in Sources */,
+				77EBDD43281D5BAF009C4477 /* FavoritesViewController.swift in Sources */,
+				77EBDD4B281D5D2D009C4477 /* CategoriesViewController.swift in Sources */,
+				77EBDD41281D5B12009C4477 /* NewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
