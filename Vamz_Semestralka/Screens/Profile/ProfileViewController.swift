@@ -1,5 +1,5 @@
 //
-//  FavoritesViewController.swift
+//  SettingsViewController.swift
 //  Vamz_Semestralka
 //
 //  Created by Alexander Krajči on 30/04/2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

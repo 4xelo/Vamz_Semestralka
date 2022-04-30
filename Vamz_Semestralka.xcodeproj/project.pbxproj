@@ -11,15 +11,16 @@
 		77EBDD29281D3B9C009C4477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD28281D3B9C009C4477 /* Assets.xcassets */; };
 		77EBDD2C281D3B9C009C4477 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD2A281D3B9C009C4477 /* LaunchScreen.storyboard */; };
 		77EBDD38281D592B009C4477 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD37281D592B009C4477 /* TabBar.storyboard */; };
-		77EBDD3C281D5A67009C4477 /* FavoritesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD3B281D5A67009C4477 /* FavoritesViewController.storyboard */; };
-		77EBDD3F281D5ADA009C4477 /* NewViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD3E281D5ADA009C4477 /* NewViewController.storyboard */; };
-		77EBDD41281D5B12009C4477 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD40281D5B12009C4477 /* NewViewController.swift */; };
-		77EBDD43281D5BAF009C4477 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD42281D5BAF009C4477 /* FavoritesViewController.swift */; };
-		77EBDD46281D5C3E009C4477 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD45281D5C3E009C4477 /* SettingsViewController.storyboard */; };
-		77EBDD49281D5D1E009C4477 /* CategoriesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD48281D5D1E009C4477 /* CategoriesViewController.storyboard */; };
-		77EBDD4B281D5D2D009C4477 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD4A281D5D2D009C4477 /* CategoriesViewController.swift */; };
-		77EBDD4E281D5D6F009C4477 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD4D281D5D6F009C4477 /* HomeViewController.storyboard */; };
-		77EBDD50281D5D87009C4477 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD4F281D5D87009C4477 /* HomeViewController.swift */; };
+		77EBDD96281D944D009C4477 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD95281D944D009C4477 /* HomeTableViewController.swift */; };
+		77EBDD98281D9466009C4477 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD97281D9466009C4477 /* CategoriesTableViewController.swift */; };
+		77EBDD9A281D9480009C4477 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD99281D9480009C4477 /* ProfileViewController.swift */; };
+		77EBDD9C281D948E009C4477 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD9B281D948E009C4477 /* FavoritesViewController.swift */; };
+		77EBDDA0281D973A009C4477 /* FavoritesTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD9F281D973A009C4477 /* FavoritesTableViewController.storyboard */; };
+		77EBDDA2281D9771009C4477 /* CategoriesTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDDA1281D9771009C4477 /* CategoriesTableViewController.storyboard */; };
+		77EBDDA4281D97A4009C4477 /* HomeTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDDA3281D97A4009C4477 /* HomeTableViewController.storyboard */; };
+		77EBDDA6281DA109009C4477 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDDA5281DA109009C4477 /* ProfileViewController.storyboard */; };
+		77EBDDAA281DB48A009C4477 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDDA8281DB48A009C4477 /* RecipeCell.swift */; };
+		77EBDDAD281DB5F1009C4477 /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDDAC281DB5F1009C4477 /* RecipeCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,15 +30,16 @@
 		77EBDD2B281D3B9C009C4477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77EBDD2D281D3B9C009C4477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77EBDD37281D592B009C4477 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
-		77EBDD3B281D5A67009C4477 /* FavoritesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoritesViewController.storyboard; sourceTree = "<group>"; };
-		77EBDD3E281D5ADA009C4477 /* NewViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewViewController.storyboard; sourceTree = "<group>"; };
-		77EBDD40281D5B12009C4477 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
-		77EBDD42281D5BAF009C4477 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		77EBDD45281D5C3E009C4477 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
-		77EBDD48281D5D1E009C4477 /* CategoriesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoriesViewController.storyboard; sourceTree = "<group>"; };
-		77EBDD4A281D5D2D009C4477 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
-		77EBDD4D281D5D6F009C4477 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
-		77EBDD4F281D5D87009C4477 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		77EBDD95281D944D009C4477 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		77EBDD97281D9466009C4477 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		77EBDD99281D9480009C4477 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		77EBDD9B281D948E009C4477 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		77EBDD9F281D973A009C4477 /* FavoritesTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavoritesTableViewController.storyboard; sourceTree = "<group>"; };
+		77EBDDA1281D9771009C4477 /* CategoriesTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CategoriesTableViewController.storyboard; path = Vamz_Semestralka/Screens/Tab/CategoriesTableViewController.storyboard; sourceTree = SOURCE_ROOT; };
+		77EBDDA3281D97A4009C4477 /* HomeTableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = HomeTableViewController.storyboard; path = Vamz_Semestralka/Screens/Tab/HomeTableViewController.storyboard; sourceTree = SOURCE_ROOT; };
+		77EBDDA5281DA109009C4477 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProfileViewController.storyboard; path = Vamz_Semestralka/Screens/Tab/ProfileViewController.storyboard; sourceTree = SOURCE_ROOT; };
+		77EBDDA8281DB48A009C4477 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		77EBDDAC281DB5F1009C4477 /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				77EBDD1F281D3B9B009C4477 /* AppDelegate.swift */,
 				77EBDD36281D3EF1009C4477 /* Model */,
 				77EBDD35281D3EDA009C4477 /* Manager */,
+				77EBDDA7281DB3EB009C4477 /* Cells */,
 				77EBDD34281D3EAE009C4477 /* Screens */,
 				77EBDD33281D3E3E009C4477 /* StartFiles */,
 			);
@@ -94,8 +97,7 @@
 			children = (
 				77EBDD4C281D5D58009C4477 /* Home */,
 				77EBDD47281D5D06009C4477 /* Categories */,
-				77EBDD44281D5BFE009C4477 /* Settings */,
-				77EBDD3D281D5ACA009C4477 /* New */,
+				77EBDD44281D5BFE009C4477 /* Profile */,
 				77EBDD3A281D5A47009C4477 /* Favorites */,
 				77EBDD39281D5A2F009C4477 /* Tab */,
 			);
@@ -127,34 +129,26 @@
 		77EBDD3A281D5A47009C4477 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				77EBDD3B281D5A67009C4477 /* FavoritesViewController.storyboard */,
-				77EBDD42281D5BAF009C4477 /* FavoritesViewController.swift */,
+				77EBDD9F281D973A009C4477 /* FavoritesTableViewController.storyboard */,
+				77EBDD9B281D948E009C4477 /* FavoritesViewController.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
 		};
-		77EBDD3D281D5ACA009C4477 /* New */ = {
+		77EBDD44281D5BFE009C4477 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				77EBDD3E281D5ADA009C4477 /* NewViewController.storyboard */,
-				77EBDD40281D5B12009C4477 /* NewViewController.swift */,
+				77EBDDA5281DA109009C4477 /* ProfileViewController.storyboard */,
+				77EBDD99281D9480009C4477 /* ProfileViewController.swift */,
 			);
-			path = New;
-			sourceTree = "<group>";
-		};
-		77EBDD44281D5BFE009C4477 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				77EBDD45281D5C3E009C4477 /* SettingsViewController.storyboard */,
-			);
-			path = Settings;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		77EBDD47281D5D06009C4477 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				77EBDD48281D5D1E009C4477 /* CategoriesViewController.storyboard */,
-				77EBDD4A281D5D2D009C4477 /* CategoriesViewController.swift */,
+				77EBDDA1281D9771009C4477 /* CategoriesTableViewController.storyboard */,
+				77EBDD97281D9466009C4477 /* CategoriesTableViewController.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -162,10 +156,19 @@
 		77EBDD4C281D5D58009C4477 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				77EBDD4D281D5D6F009C4477 /* HomeViewController.storyboard */,
-				77EBDD4F281D5D87009C4477 /* HomeViewController.swift */,
+				77EBDDA3281D97A4009C4477 /* HomeTableViewController.storyboard */,
+				77EBDD95281D944D009C4477 /* HomeTableViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		77EBDDA7281DB3EB009C4477 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				77EBDDA8281DB48A009C4477 /* RecipeCell.swift */,
+				77EBDDAC281DB5F1009C4477 /* RecipeCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,14 +229,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77EBDD49281D5D1E009C4477 /* CategoriesViewController.storyboard in Resources */,
 				77EBDD2C281D3B9C009C4477 /* LaunchScreen.storyboard in Resources */,
+				77EBDDA6281DA109009C4477 /* ProfileViewController.storyboard in Resources */,
 				77EBDD38281D592B009C4477 /* TabBar.storyboard in Resources */,
-				77EBDD3F281D5ADA009C4477 /* NewViewController.storyboard in Resources */,
-				77EBDD4E281D5D6F009C4477 /* HomeViewController.storyboard in Resources */,
+				77EBDDA0281D973A009C4477 /* FavoritesTableViewController.storyboard in Resources */,
+				77EBDDA2281D9771009C4477 /* CategoriesTableViewController.storyboard in Resources */,
 				77EBDD29281D3B9C009C4477 /* Assets.xcassets in Resources */,
-				77EBDD46281D5C3E009C4477 /* SettingsViewController.storyboard in Resources */,
-				77EBDD3C281D5A67009C4477 /* FavoritesViewController.storyboard in Resources */,
+				77EBDDA4281D97A4009C4477 /* HomeTableViewController.storyboard in Resources */,
+				77EBDDAD281DB5F1009C4477 /* RecipeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,11 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77EBDD50281D5D87009C4477 /* HomeViewController.swift in Sources */,
+				77EBDD98281D9466009C4477 /* CategoriesTableViewController.swift in Sources */,
+				77EBDD96281D944D009C4477 /* HomeTableViewController.swift in Sources */,
 				77EBDD20281D3B9B009C4477 /* AppDelegate.swift in Sources */,
-				77EBDD43281D5BAF009C4477 /* FavoritesViewController.swift in Sources */,
-				77EBDD4B281D5D2D009C4477 /* CategoriesViewController.swift in Sources */,
-				77EBDD41281D5B12009C4477 /* NewViewController.swift in Sources */,
+				77EBDDAA281DB48A009C4477 /* RecipeCell.swift in Sources */,
+				77EBDD9C281D948E009C4477 /* FavoritesViewController.swift in Sources */,
+				77EBDD9A281D9480009C4477 /* ProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +398,7 @@
 				INFOPLIST_FILE = Vamz_Semestralka/StartFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -422,7 +426,7 @@
 				INFOPLIST_FILE = Vamz_Semestralka/StartFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
