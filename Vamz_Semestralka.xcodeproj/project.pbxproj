@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		77EBDD20281D3B9B009C4477 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD1F281D3B9B009C4477 /* AppDelegate.swift */; };
-		77EBDD22281D3B9B009C4477 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD21281D3B9B009C4477 /* SceneDelegate.swift */; };
 		77EBDD24281D3B9B009C4477 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD23281D3B9B009C4477 /* ViewController.swift */; };
 		77EBDD27281D3B9B009C4477 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD25281D3B9B009C4477 /* Main.storyboard */; };
 		77EBDD29281D3B9C009C4477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD28281D3B9C009C4477 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		77EBDD1C281D3B9B009C4477 /* Vamz_Semestralka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vamz_Semestralka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EBDD1F281D3B9B009C4477 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		77EBDD21281D3B9B009C4477 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		77EBDD23281D3B9B009C4477 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		77EBDD26281D3B9B009C4477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77EBDD28281D3B9C009C4477 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				77EBDD1F281D3B9B009C4477 /* AppDelegate.swift */,
-				77EBDD21281D3B9B009C4477 /* SceneDelegate.swift */,
 				77EBDD23281D3B9B009C4477 /* ViewController.swift */,
 				77EBDD25281D3B9B009C4477 /* Main.storyboard */,
 				77EBDD28281D3B9C009C4477 /* Assets.xcassets */,
@@ -140,7 +137,6 @@
 			files = (
 				77EBDD24281D3B9B009C4477 /* ViewController.swift in Sources */,
 				77EBDD20281D3B9B009C4477 /* AppDelegate.swift in Sources */,
-				77EBDD22281D3B9B009C4477 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
