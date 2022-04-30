@@ -22,6 +22,10 @@
 		77EBDDAA281DB48A009C4477 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDDA8281DB48A009C4477 /* RecipeCell.swift */; };
 		77EBDDAD281DB5F1009C4477 /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDDAC281DB5F1009C4477 /* RecipeCell.xib */; };
 		77EBDDB0281DD3C5009C4477 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDDAF281DD3C5009C4477 /* ShadowView.swift */; };
+		77EBDDB6281DD8BB009C4477 /* FeatureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDDB5281DD8BB009C4477 /* FeatureCell.xib */; };
+		77EBDDB8281DD94F009C4477 /* FeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDDB7281DD94F009C4477 /* FeatureCell.swift */; };
+		77EBDDC2281DE584009C4477 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDDC1281DE584009C4477 /* HeaderView.swift */; };
+		77EBDDC4281DE5B4009C4477 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDDC3281DE5B4009C4477 /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		77EBDDA8281DB48A009C4477 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		77EBDDAC281DB5F1009C4477 /* RecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
 		77EBDDAF281DD3C5009C4477 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		77EBDDB5281DD8BB009C4477 /* FeatureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeatureCell.xib; sourceTree = "<group>"; };
+		77EBDDB7281DD94F009C4477 /* FeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCell.swift; sourceTree = "<group>"; };
+		77EBDDC1281DE584009C4477 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		77EBDDC3281DE5B4009C4477 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,8 +176,9 @@
 		77EBDDA7281DB3EB009C4477 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				77EBDDA8281DB48A009C4477 /* RecipeCell.swift */,
-				77EBDDAC281DB5F1009C4477 /* RecipeCell.xib */,
+				77EBDDC0281DE2D1009C4477 /* Featured */,
+				77EBDDBE281DE2AC009C4477 /* Recipe */,
+				77EBDDBB281DE275009C4477 /* Header */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -180,6 +189,33 @@
 				77EBDDAF281DD3C5009C4477 /* ShadowView.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		77EBDDBB281DE275009C4477 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				77EBDDC1281DE584009C4477 /* HeaderView.swift */,
+				77EBDDC3281DE5B4009C4477 /* HeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		77EBDDBE281DE2AC009C4477 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				77EBDDAC281DB5F1009C4477 /* RecipeCell.xib */,
+				77EBDDA8281DB48A009C4477 /* RecipeCell.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		77EBDDC0281DE2D1009C4477 /* Featured */ = {
+			isa = PBXGroup;
+			children = (
+				77EBDDB7281DD94F009C4477 /* FeatureCell.swift */,
+				77EBDDB5281DD8BB009C4477 /* FeatureCell.xib */,
+			);
+			path = Featured;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77EBDD2C281D3B9C009C4477 /* LaunchScreen.storyboard in Resources */,
+				77EBDDC4281DE5B4009C4477 /* HeaderView.xib in Resources */,
 				77EBDDA6281DA109009C4477 /* ProfileViewController.storyboard in Resources */,
 				77EBDD38281D592B009C4477 /* TabBar.storyboard in Resources */,
 				77EBDDA0281D973A009C4477 /* FavoritesTableViewController.storyboard in Resources */,
@@ -248,6 +285,7 @@
 				77EBDD29281D3B9C009C4477 /* Assets.xcassets in Resources */,
 				77EBDDA4281D97A4009C4477 /* HomeTableViewController.storyboard in Resources */,
 				77EBDDAD281DB5F1009C4477 /* RecipeCell.xib in Resources */,
+				77EBDDB6281DD8BB009C4477 /* FeatureCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77EBDDB8281DD94F009C4477 /* FeatureCell.swift in Sources */,
+				77EBDDC2281DE584009C4477 /* HeaderView.swift in Sources */,
 				77EBDD98281D9466009C4477 /* CategoriesTableViewController.swift in Sources */,
 				77EBDD96281D944D009C4477 /* HomeTableViewController.swift in Sources */,
 				77EBDD20281D3B9B009C4477 /* AppDelegate.swift in Sources */,
