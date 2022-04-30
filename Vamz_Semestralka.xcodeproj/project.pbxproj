@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		77EBDD20281D3B9B009C4477 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD1F281D3B9B009C4477 /* AppDelegate.swift */; };
-		77EBDD24281D3B9B009C4477 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD23281D3B9B009C4477 /* ViewController.swift */; };
-		77EBDD27281D3B9B009C4477 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD25281D3B9B009C4477 /* Main.storyboard */; };
 		77EBDD29281D3B9C009C4477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD28281D3B9C009C4477 /* Assets.xcassets */; };
 		77EBDD2C281D3B9C009C4477 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD2A281D3B9C009C4477 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -17,8 +15,6 @@
 /* Begin PBXFileReference section */
 		77EBDD1C281D3B9B009C4477 /* Vamz_Semestralka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vamz_Semestralka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EBDD1F281D3B9B009C4477 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		77EBDD23281D3B9B009C4477 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		77EBDD26281D3B9B009C4477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77EBDD28281D3B9C009C4477 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77EBDD2B281D3B9C009C4477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77EBDD2D281D3B9C009C4477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,13 +51,43 @@
 			isa = PBXGroup;
 			children = (
 				77EBDD1F281D3B9B009C4477 /* AppDelegate.swift */,
-				77EBDD23281D3B9B009C4477 /* ViewController.swift */,
-				77EBDD25281D3B9B009C4477 /* Main.storyboard */,
+				77EBDD36281D3EF1009C4477 /* Model */,
+				77EBDD35281D3EDA009C4477 /* Manager */,
+				77EBDD34281D3EAE009C4477 /* Screens */,
+				77EBDD33281D3E3E009C4477 /* StartFiles */,
+			);
+			path = Vamz_Semestralka;
+			sourceTree = "<group>";
+		};
+		77EBDD33281D3E3E009C4477 /* StartFiles */ = {
+			isa = PBXGroup;
+			children = (
 				77EBDD28281D3B9C009C4477 /* Assets.xcassets */,
 				77EBDD2A281D3B9C009C4477 /* LaunchScreen.storyboard */,
 				77EBDD2D281D3B9C009C4477 /* Info.plist */,
 			);
-			path = Vamz_Semestralka;
+			path = StartFiles;
+			sourceTree = "<group>";
+		};
+		77EBDD34281D3EAE009C4477 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		77EBDD35281D3EDA009C4477 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		77EBDD36281D3EF1009C4477 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +150,6 @@
 			files = (
 				77EBDD2C281D3B9C009C4477 /* LaunchScreen.storyboard in Resources */,
 				77EBDD29281D3B9C009C4477 /* Assets.xcassets in Resources */,
-				77EBDD27281D3B9B009C4477 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +160,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77EBDD24281D3B9B009C4477 /* ViewController.swift in Sources */,
 				77EBDD20281D3B9B009C4477 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +167,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		77EBDD25281D3B9B009C4477 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				77EBDD26281D3B9B009C4477 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		77EBDD2A281D3B9C009C4477 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,7 +303,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9LAA96ZSR4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Vamz_Semestralka/Info.plist;
+				INFOPLIST_FILE = Vamz_Semestralka/StartFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +331,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9LAA96ZSR4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Vamz_Semestralka/Info.plist;
+				INFOPLIST_FILE = Vamz_Semestralka/StartFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
