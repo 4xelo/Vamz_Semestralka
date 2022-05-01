@@ -29,36 +29,38 @@
         <!--Categories-->
         <scene sceneID="scy-Lf-BRJ">
             <objects>
-                <tableViewController storyboardIdentifier="UITableViewController-JRL-fY-9Wi" id="l6f-h5-H01" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="kVR-6d-aXi">
+                <tableViewController id="l6f-h5-H01" customClass="CategoriesTableViewController" customModule="Vamz_Semestralka" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="kVR-6d-aXi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="60" id="S6w-Ig-igM" customClass="CategoryCell" customModule="Vamz_Semestralka" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="64" id="S6w-Ig-igM" customClass="CategoryCell" customModule="Vamz_Semestralka" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S6w-Ig-igM" id="dCf-Uy-hsj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n82-DT-5Ix" customClass="ShadowView" customModule="Vamz_Semestralka" customModuleProvider="target">
-                                            <rect key="frame" x="16" y="5" width="343" height="50"/>
+                                            <rect key="frame" x="16" y="5" width="343" height="54"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrb-0Y-9IN">
-                                            <rect key="frame" x="24" y="12.333333969116211" width="327" height="34"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xrb-0Y-9IN">
+                                            <rect key="frame" x="24" y="17" width="327" height="26"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="n82-DT-5Ix" secondAttribute="bottom" constant="5" id="6IN-mT-VhK"/>
                                         <constraint firstItem="n82-DT-5Ix" firstAttribute="top" secondItem="dCf-Uy-hsj" secondAttribute="top" constant="5" id="A46-ii-yJr"/>
+                                        <constraint firstItem="Xrb-0Y-9IN" firstAttribute="top" secondItem="dCf-Uy-hsj" secondAttribute="topMargin" constant="6" id="Hf6-ii-VcB"/>
                                         <constraint firstItem="n82-DT-5Ix" firstAttribute="leading" secondItem="dCf-Uy-hsj" secondAttribute="leading" constant="16" id="K6j-9o-0An"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Xrb-0Y-9IN" secondAttribute="trailing" constant="8" id="R2L-vr-F04"/>
+                                        <constraint firstItem="Xrb-0Y-9IN" firstAttribute="leading" secondItem="dCf-Uy-hsj" secondAttribute="leadingMargin" constant="8" id="acy-Tv-Zvg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Xrb-0Y-9IN" secondAttribute="bottom" constant="10" id="cjm-ws-krc"/>
                                         <constraint firstAttribute="trailing" secondItem="n82-DT-5Ix" secondAttribute="trailing" constant="16" id="dgV-rs-aga"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -92,9 +94,6 @@
         <image name="square.fill.text.grid.1x2" catalog="system" width="128" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
