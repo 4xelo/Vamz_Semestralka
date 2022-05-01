@@ -13,6 +13,11 @@
 		777B3D85281E97A200AAD21C /* spaghetti.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 777B3D84281E97A100AAD21C /* spaghetti.jpeg */; };
 		777B3D89281EA59400AAD21C /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777B3D88281EA59400AAD21C /* FavoritesTableViewController.swift */; };
 		777B3D8B281EA8A800AAD21C /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777B3D8A281EA8A800AAD21C /* CategoryCell.swift */; };
+		77D4300D281ECD0800656AD0 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4300C281ECD0800656AD0 /* Categories.swift */; };
+		77D4300F281ECE5900656AD0 /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D4300E281ECE5900656AD0 /* Recipes.swift */; };
+		77D43017281F062700656AD0 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D43016281F062700656AD0 /* StartViewController.swift */; };
+		77D43019281F063200656AD0 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77D43018281F063200656AD0 /* Start.storyboard */; };
+		77D43023281F36D500656AD0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D43022281F36D500656AD0 /* LoginViewController.swift */; };
 		77EBDD20281D3B9B009C4477 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EBDD1F281D3B9B009C4477 /* AppDelegate.swift */; };
 		77EBDD29281D3B9C009C4477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD28281D3B9C009C4477 /* Assets.xcassets */; };
 		77EBDD2C281D3B9C009C4477 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EBDD2A281D3B9C009C4477 /* LaunchScreen.storyboard */; };
@@ -39,6 +44,11 @@
 		777B3D84281E97A100AAD21C /* spaghetti.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = spaghetti.jpeg; path = ../../../../spaghetti.jpeg; sourceTree = "<group>"; };
 		777B3D88281EA59400AAD21C /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		777B3D8A281EA8A800AAD21C /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		77D4300C281ECD0800656AD0 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		77D4300E281ECE5900656AD0 /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
+		77D43016281F062700656AD0 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		77D43018281F063200656AD0 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		77D43022281F36D500656AD0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		77EBDD1C281D3B9B009C4477 /* Vamz_Semestralka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vamz_Semestralka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EBDD1F281D3B9B009C4477 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77EBDD28281D3B9C009C4477 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +81,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77D4300A281ECC6A00656AD0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				77D43015281F060100656AD0 /* StartScreen */,
+				77D43010281F04D000656AD0 /* LoginScreen */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		77D4300B281ECCB600656AD0 /* FeaturedCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				777B3D78281E882A00AAD21C /* FeaturedCollectionViewCell.swift */,
+				777B3D7A281E885500AAD21C /* FeaturedCollectionViewCell.xib */,
+			);
+			path = FeaturedCollectionView;
+			sourceTree = "<group>";
+		};
+		77D43010281F04D000656AD0 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				77D43022281F36D500656AD0 /* LoginViewController.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		77D43015281F060100656AD0 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				77D43016281F062700656AD0 /* StartViewController.swift */,
+				77D43018281F063200656AD0 /* Start.storyboard */,
+			);
+			path = StartScreen;
+			sourceTree = "<group>";
+		};
 		77EBDD13281D3B9B009C4477 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +159,8 @@
 		77EBDD34281D3EAE009C4477 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				77D4300A281ECC6A00656AD0 /* Login */,
+				77EBDDBB281DE275009C4477 /* Header */,
 				77EBDD4C281D5D58009C4477 /* Home */,
 				77EBDD47281D5D06009C4477 /* Categories */,
 				77EBDD44281D5BFE009C4477 /* Profile */,
@@ -188,7 +235,6 @@
 			children = (
 				77EBDDC0281DE2D1009C4477 /* Featured */,
 				77EBDDBE281DE2AC009C4477 /* Recipe */,
-				77EBDDBB281DE275009C4477 /* Header */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -197,6 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				77EBDDAF281DD3C5009C4477 /* ShadowView.swift */,
+				77D4300C281ECD0800656AD0 /* Categories.swift */,
+				77D4300E281ECE5900656AD0 /* Recipes.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -224,8 +272,7 @@
 			children = (
 				77EBDDB7281DD94F009C4477 /* FeatureCell.swift */,
 				77EBDDB5281DD8BB009C4477 /* FeatureCell.xib */,
-				777B3D78281E882A00AAD21C /* FeaturedCollectionViewCell.swift */,
-				777B3D7A281E885500AAD21C /* FeaturedCollectionViewCell.xib */,
+				77D4300B281ECCB600656AD0 /* FeaturedCollectionView */,
 			);
 			path = Featured;
 			sourceTree = "<group>";
@@ -291,6 +338,7 @@
 				77EBDD2C281D3B9C009C4477 /* LaunchScreen.storyboard in Resources */,
 				77EBDDC4281DE5B4009C4477 /* HeaderView.xib in Resources */,
 				77EBDDA6281DA109009C4477 /* ProfileViewController.storyboard in Resources */,
+				77D43019281F063200656AD0 /* Start.storyboard in Resources */,
 				77EBDD38281D592B009C4477 /* TabBar.storyboard in Resources */,
 				77EBDDA0281D973A009C4477 /* FavoritesTableViewController.storyboard in Resources */,
 				77EBDDA2281D9771009C4477 /* CategoriesTableViewController.storyboard in Resources */,
@@ -311,13 +359,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				77EBDDB8281DD94F009C4477 /* FeatureCell.swift in Sources */,
+				77D43017281F062700656AD0 /* StartViewController.swift in Sources */,
 				777B3D77281E80B800AAD21C /* HeaderView.swift in Sources */,
+				77D43023281F36D500656AD0 /* LoginViewController.swift in Sources */,
 				777B3D79281E882A00AAD21C /* FeaturedCollectionViewCell.swift in Sources */,
 				777B3D89281EA59400AAD21C /* FavoritesTableViewController.swift in Sources */,
 				77EBDD98281D9466009C4477 /* CategoriesTableViewController.swift in Sources */,
+				77D4300D281ECD0800656AD0 /* Categories.swift in Sources */,
 				77EBDD96281D944D009C4477 /* HomeTableViewController.swift in Sources */,
 				77EBDD20281D3B9B009C4477 /* AppDelegate.swift in Sources */,
 				77EBDDAA281DB48A009C4477 /* RecipeCell.swift in Sources */,
+				77D4300F281ECE5900656AD0 /* Recipes.swift in Sources */,
 				77EBDD9A281D9480009C4477 /* ProfileViewController.swift in Sources */,
 				77EBDDB0281DD3C5009C4477 /* ShadowView.swift in Sources */,
 				777B3D8B281EA8A800AAD21C /* CategoryCell.swift in Sources */,
@@ -466,7 +518,7 @@
 				INFOPLIST_FILE = Vamz_Semestralka/StartFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
+				INFOPLIST_KEY_UIMainStoryboardFile = Start;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -495,7 +547,7 @@
 				INFOPLIST_FILE = Vamz_Semestralka/StartFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TabBar;
+				INFOPLIST_KEY_UIMainStoryboardFile = Start;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

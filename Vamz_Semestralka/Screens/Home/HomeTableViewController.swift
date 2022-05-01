@@ -19,7 +19,9 @@ class HomeTableViewController: UITableViewController{
     let items = [["Pasta"],["Chicken Breast","Pasta" , "Spagethi", "Risoto"]]
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        StartViewController.view
+        
         let recipeCell = UINib.init(nibName: "RecipeCell", bundle: nil)
         self.tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
         let featureCell = UINib.init(nibName: "FeatureCell", bundle: nil)
