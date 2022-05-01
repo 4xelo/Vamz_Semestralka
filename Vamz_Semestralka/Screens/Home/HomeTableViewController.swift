@@ -20,7 +20,7 @@ class HomeTableViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        StartViewController.view
+        
         
         let recipeCell = UINib.init(nibName: "RecipeCell", bundle: nil)
         self.tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
