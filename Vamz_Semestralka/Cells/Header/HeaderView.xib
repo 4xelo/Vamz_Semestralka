@@ -11,10 +11,49 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderView" customModule="Vamz_Semestralka" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75M-fH-Qmd" userLabel="shadowView" customClass="ShadowView" customModule="Vamz_Semestralka" customModuleProvider="target">
+                    <rect key="frame" x="16" y="0.0" width="343" height="45"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6OK-wJ-D3C">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lS4-y9-gt8">
+                            <rect key="frame" x="16" y="10" width="343" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="lS4-y9-gt8" secondAttribute="trailing" constant="16" id="J3N-5q-lmb"/>
+                        <constraint firstItem="lS4-y9-gt8" firstAttribute="leading" secondItem="6OK-wJ-D3C" secondAttribute="leading" constant="16" id="TpQ-YF-goo"/>
+                        <constraint firstAttribute="bottom" secondItem="lS4-y9-gt8" secondAttribute="bottom" constant="14" id="hT9-Cf-NJW"/>
+                        <constraint firstItem="lS4-y9-gt8" firstAttribute="top" secondItem="6OK-wJ-D3C" secondAttribute="top" constant="10" id="kC8-wX-3g3"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6OK-wJ-D3C" secondAttribute="bottom" id="0x3-XB-ePV"/>
+                <constraint firstAttribute="trailing" secondItem="6OK-wJ-D3C" secondAttribute="trailing" id="YiY-iw-B3h"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="75M-fH-Qmd" secondAttribute="bottom" id="cft-7l-MIM"/>
+                <constraint firstAttribute="trailing" secondItem="75M-fH-Qmd" secondAttribute="trailing" constant="16" id="e8Q-HJ-5F4"/>
+                <constraint firstItem="75M-fH-Qmd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="ipW-0o-YDU"/>
+                <constraint firstItem="6OK-wJ-D3C" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lAg-9H-Yfj"/>
+                <constraint firstItem="75M-fH-Qmd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nHq-uJ-xzi"/>
+                <constraint firstItem="6OK-wJ-D3C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sX4-ia-NJ0"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerLabel" destination="lS4-y9-gt8" id="bb3-J6-zf0"/>
+            </connections>
             <point key="canvasLocation" x="139" y="92"/>
         </view>
     </objects>

@@ -5,10 +5,16 @@
 //  Created by Alexander Krajči on 30/04/2022.
 //
 
+enum CellSection: Int {
+    case featured = 0
+    case latest = 1
+}
+
+
 import UIKit
 
-class HomeTableViewController: UITableViewController {
-
+class HomeTableViewController: UITableViewController{
+  
     let sections = ["FEATURED RECIPES", "LATEST"]
     let items = [["Pasta"],["Chicken Breast","Pasta" , "Spagethi", "Risoto"]]
     override func viewDidLoad() {
@@ -18,6 +24,8 @@ class HomeTableViewController: UITableViewController {
         self.tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
         let featureCell = UINib.init(nibName: "FeatureCell", bundle: nil)
         self.tableView.register(featureCell, forCellReuseIdentifier: "FeatureCell")
+        let headerView = UINib.init(nibName: "HeaderView", bundle: nil)
+        self.tableView.register(headerView, forHeaderFooterViewReuseIdentifier: "HeaderView")
     }
 
     // MARK: - Table view data source
@@ -57,10 +65,41 @@ class HomeTableViewController: UITableViewController {
         return cell
     }
    
-
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let featureCell = cell as? FeatureCell
+        featureCell?.collectionView.delegate = self
+        featureCell?.collectionView.dataSource = self
+        
+        let collectionViewNib = UINib.init(nibName: "FeaturedCollectionViewCell", bundle: nil)
+        featureCell?.collectionView.register(collectionViewNib, forCellWithReuseIdentifier: "CollectionCell")
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as! HeaderView
+        headerView.headerLabel.text = sections[section]
+        return headerView
+    }
 }
-enum CellSection: Int {
-    case featured = 0
-    case latest = 1
+extension HomeTableViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! FeaturedCollectionViewCell
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = CGSize(width: 250, height: 120)
+        return size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 20, left: 16, bottom: 20, right: 16)
+    }
 }
 

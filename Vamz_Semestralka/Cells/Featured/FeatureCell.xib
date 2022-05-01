@@ -18,9 +18,9 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                     <subviews>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6BU-kn-j1n">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                            <rect key="frame" x="16" y="0.0" width="343" height="160"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xAe-br-Oou">
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xAe-br-Oou">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -31,9 +31,9 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="6BU-kn-j1n" firstAttribute="top" secondItem="maK-83-1AS" secondAttribute="top" id="4jx-gH-h2h"/>
-                        <constraint firstAttribute="trailing" secondItem="6BU-kn-j1n" secondAttribute="trailing" id="5yx-LL-xDb"/>
                         <constraint firstAttribute="bottom" secondItem="6BU-kn-j1n" secondAttribute="bottom" id="FqW-R0-BAH"/>
-                        <constraint firstItem="6BU-kn-j1n" firstAttribute="leading" secondItem="maK-83-1AS" secondAttribute="leading" id="slS-J1-py5"/>
+                        <constraint firstAttribute="trailing" secondItem="6BU-kn-j1n" secondAttribute="trailing" constant="16" id="XU0-vo-O37"/>
+                        <constraint firstItem="6BU-kn-j1n" firstAttribute="leading" secondItem="maK-83-1AS" secondAttribute="leading" constant="16" id="mjp-qU-ncX"/>
                     </constraints>
                 </view>
             </subviews>
