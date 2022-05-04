@@ -9,8 +9,6 @@ enum CellSection: Int {
     case featured = 0
     case latest = 1
 }
-
-
 import UIKit
 
 class HomeTableViewController: UITableViewController{
@@ -19,8 +17,6 @@ class HomeTableViewController: UITableViewController{
     let items = [["Pasta"],["Chicken Breast","Pasta" , "Spagethi", "Risoto"]]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         let recipeCell = UINib.init(nibName: "RecipeCell", bundle: nil)
         self.tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
@@ -80,6 +76,9 @@ class HomeTableViewController: UITableViewController{
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as! HeaderView
         headerView.headerLabel.text = sections[section]
         return headerView
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }
 extension HomeTableViewController : UICollectionViewDelegate, UICollectionViewDataSource {
