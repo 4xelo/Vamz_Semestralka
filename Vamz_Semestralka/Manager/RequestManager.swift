@@ -7,11 +7,13 @@
 
 import Foundation
 
-struct RequestManager {
+
+//typealias FoodCompletionHandler = ((FoodResponse?,Error?)-> Void)
+class RequestManager {
     
     static let shared = RequestManager()  //singleton
     
-    func getFoodData(String food: String) {
+    func getFoodData(String food: String){
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "api.edamam.com"
@@ -21,31 +23,30 @@ struct RequestManager {
         let typeItem = URLQueryItem(name:"type", value: "public")
         urlComponents.queryItems = [appIdItem, appKeyItem, typeItem]
         
-        
-        guard let url = urlComponents.url else {
-            return
-        }
-    
-                
-        let task = URLSession.shared.dataTask(with: url) {data, response, error in
-            
-            guard let data = data else {
-                return
-            }
-            do {
-                let decoder = JSONDecoder()
-                let recipeResponse = try decoder.decode(FoodResponse.self, from: data)
-                
-                print(recipeResponse)
-            }catch let error{
-                print(error)
-            }
-        }
-        task.resume()
-    }
-    
+//
+//        guard let url = urlComponents.url else {
+//            return
+//        }
+//
+//
+//        let task = URLSession.shared.dataTask(with: url) {data, response, error in
+//            guard let data = data else {
+//                return
+//            }
+//            do {
+//                let decoder = JSONDecoder()
+//                //let recipeResponse = try decoder.decode(FoodResponse.self, from: data)
+//
+//                completion(recipeResponse,  Error.self as? Error)
+//            }catch let error{
+//                print(error)
+//            }
+//        }
+//        task.resume()
+//    }
+//
 }
-
+}
     
     
 

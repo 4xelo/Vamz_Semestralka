@@ -124,6 +124,13 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="foodImage" destination="XPr-9G-QBI" id="BGD-1V-k9Q"/>
+                <outlet property="foodNameLabel" destination="wrb-fg-nRv" id="bFJ-Az-DC8"/>
+                <outlet property="servingsLabel" destination="gKR-jj-bDF" id="1KB-kO-P0E"/>
+                <outlet property="timeLabel" destination="cpu-z0-Jat" id="Bxr-Bp-Wqu"/>
+                <outlet property="typeLabel" destination="hbB-r1-FKt" id="bV9-sh-TAH"/>
+            </connections>
             <point key="canvasLocation" x="94.927536231884062" y="-63.616071428571423"/>
         </view>
     </objects>

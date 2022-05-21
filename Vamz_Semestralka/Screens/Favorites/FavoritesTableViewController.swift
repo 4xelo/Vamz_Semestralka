@@ -9,7 +9,7 @@ import UIKit
 
 class FavoritesTableViewController: UITableViewController {
 
-    let items = ["pasta","pasta","pasta","pasta"]
+    let items = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,12 +11,16 @@ enum CellSection: Int {
 }
 import UIKit
 
-class HomeTableViewController: UITableViewController{
+class HomeViewController: UIViewController{
   
+    @IBOutlet weak var tableView: UITableView!
     let sections = ["FEATURED RECIPES", "LATEST"]
     let items = [["Pasta"],["Chicken Breast","Pasta" , "Spagethi", "Risoto"]]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         let recipeCell = UINib.init(nibName: "RecipeCell", bundle: nil)
         self.tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
@@ -26,13 +30,16 @@ class HomeTableViewController: UITableViewController{
         self.tableView.register(headerView, forHeaderFooterViewReuseIdentifier: "HeaderView")
     }
 
+    
+}
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+    
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+    func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let section = CellSection(rawValue: indexPath.section) else { return 0 }
         // chcem mat rozne vysky pre selekcie, pouzivam guard let, ak sa mi nepodari pridat do sekcie indexPath tak vratim 0, akoby sa nevytvorila cella
         switch section {
@@ -43,11 +50,10 @@ class HomeTableViewController: UITableViewController{
         }
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items[section].count
     }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
         if let section = CellSection(rawValue: indexPath.section) {
@@ -63,7 +69,7 @@ class HomeTableViewController: UITableViewController{
         return cell
     }
    
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let featureCell = cell as? FeatureCell
         featureCell?.collectionView.delegate = self
         featureCell?.collectionView.dataSource = self
@@ -72,16 +78,17 @@ class HomeTableViewController: UITableViewController{
         featureCell?.collectionView.register(collectionViewNib, forCellWithReuseIdentifier: "CollectionCell")
     }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as! HeaderView
         headerView.headerLabel.text = sections[section]
         return headerView
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
 }
-extension HomeTableViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+
+extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 7
     }
