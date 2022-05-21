@@ -57,42 +57,6 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="99.776785714285708"/>
         </scene>
-        <!--Title-->
-        <scene sceneID="dMQ-d1-v1w">
-            <objects>
-                <viewController storyboardIdentifier="entry" id="gUk-LY-Iw6" customClass="EntryViewController" customModule="Vamz_Semestralka" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Xiz-fO-Mep">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfE-Dz-blS">
-                                <rect key="frame" x="20" y="74" width="374" height="52"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="bRO-Us-hms"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="VxJ-u6-6sH"/>
-                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                        <constraints>
-                            <constraint firstItem="jfE-Dz-blS" firstAttribute="leading" secondItem="VxJ-u6-6sH" secondAttribute="leading" constant="20" id="Bzw-iL-xSg"/>
-                            <constraint firstItem="VxJ-u6-6sH" firstAttribute="trailing" secondItem="jfE-Dz-blS" secondAttribute="trailing" constant="20" id="hpA-Ax-D8w"/>
-                            <constraint firstItem="jfE-Dz-blS" firstAttribute="top" secondItem="VxJ-u6-6sH" secondAttribute="top" constant="30" id="leL-K8-0ok"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="Rwl-iB-86F"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="field" destination="jfE-Dz-blS" id="Id8-HM-m2u"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LaL-eU-KDY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2130" y="100"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Kge-SE-Yqq">
             <objects>
@@ -117,9 +81,6 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

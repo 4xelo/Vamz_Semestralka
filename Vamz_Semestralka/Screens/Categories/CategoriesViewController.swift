@@ -39,10 +39,8 @@ let categories = ["BREAD","BREAKFAST","BRUNCH","BURGER","DESSERT","DINNER","FISH
                   "SAUCE","SPAGHETTI","SIDE DISH","SNACK","SOUP","VEGAN"]
 class CategoriesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var searchBar: UISearchBar!
-  
-    
+      
     var searchCategory = [String]()
     var searching = false
     
@@ -50,8 +48,7 @@ class CategoriesViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.delegate = self
-        tableView.dataSource = self
-        
+        tableView.dataSource = self        
     }
 }
 
@@ -77,8 +74,8 @@ class CategoriesViewController: UIViewController {
             
             if searching {
                 cell.categoryLabel.text = searchCategory[indexPath.row]
-            }else {
-                
+            }
+            else {
                 cell.categoryLabel.text = categories[indexPath.row]
             }
             return cell
@@ -87,8 +84,6 @@ class CategoriesViewController: UIViewController {
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> Void{
             _ = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
             
-
-           
         }
         
     }

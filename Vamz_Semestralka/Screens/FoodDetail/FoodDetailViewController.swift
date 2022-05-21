@@ -12,7 +12,5 @@ class FoodDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Food Detail"
-        
     }
-
 }
