@@ -10,7 +10,7 @@ import Foundation
 struct Constants {
     
     struct Urls {
-        
+
         static let recipeCategoryURL = URL (string: "https://recipesapi.herokuapp.com/api/v2/categories")!
        
     }

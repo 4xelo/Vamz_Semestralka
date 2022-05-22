@@ -24,21 +24,12 @@ class SListViewController: UIViewController, UITableViewDelegate{
         
     }
     private func refreshTableView() {
-        
         self.lists = ShopListManager.shared.shoppingItemsList
         self.tableView.reloadData()
     }
 
     @IBAction func didTapAdd(_ sender: Any) {
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "entry") as! EntryViewController
-//        vc.title = "New List"
-//        vc.update = {
-//            DispatchQueue.main.async {//prioritizujeme updatovanie
-//                self.updateLists()
-//            }
-//        }
-       // navigationController?.pushViewController(vc, animated: true)
-        
+
         let alert = UIAlertController(title: "New Item", message: "Enter new shopping item", preferredStyle: .alert)
         alert.addTextField{ field in
             field.placeholder = "Enter item..."

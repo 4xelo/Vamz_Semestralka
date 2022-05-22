@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 
 //typealias FoodCompletionHandler = ((FoodResponse?,Error?)-> Void)
@@ -13,40 +14,31 @@ class RequestManager {
     
     static let shared = RequestManager()  //singleton
     
-    func getFoodData(String food: String){
-        var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "api.edamam.com"
-        urlComponents.path = "/api/recipes/v2/\(food)?"
-        let appIdItem = URLQueryItem(name: "app_id", value: "9a678030")
-        let appKeyItem = URLQueryItem(name:"app_key", value: "9cdc5f81ab63e865f01d9f6bb828cb8b")
-        let typeItem = URLQueryItem(name:"type", value: "public")
-        urlComponents.queryItems = [appIdItem, appKeyItem, typeItem]
+    func getCategoryData(completion: @escaping (Result<RecipeCategoryResponse, AFError>) -> Void) {
         
-//
-//        guard let url = urlComponents.url else {
-//            return
-//        }
-//
-//
-//        let task = URLSession.shared.dataTask(with: url) {data, response, error in
-//            guard let data = data else {
-//                return
-//            }
-//            do {
-//                let decoder = JSONDecoder()
-//                //let recipeResponse = try decoder.decode(FoodResponse.self, from: data)
-//
-//                completion(recipeResponse,  Error.self as? Error)
-//            }catch let error{
-//                print(error)
-//            }
-//        }
-//        task.resume()
-//    }
-//
+        let decoder = JSONDecoder()
+        
+        AF.request(Constants.Urls.recipeCategoryURL, method: .get, parameters: nil)
+            .validate()
+            .responseDecodable(of: RecipeCategoryResponse.self, decoder: decoder) {
+                completion($0.result)
+        }
+    }
+    
+    func getRecipeData(for parameters: RecipeRequest, completion: @escaping (Result<RecipeResponse, AFError>) -> Void) {
+        
+        let decoder = JSONDecoder()
+        
+        AF.request(Constants.Urls.recipeCategoryURL,method: .get,parameters: parameters)
+            .validate()
+            .responseDecodable(of: RecipeResponse.self,  decoder: decoder) {
+                completion($0.result)
+            }
+        
+    }
+
 }
-}
+
     
     
 

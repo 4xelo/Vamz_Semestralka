@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+
+class RecipeManager {
+    
+    static let shared = RecipeManager()
+    
+    
+}
