@@ -9,19 +9,21 @@ import Foundation
 
 
 typealias shopListCompletion = () -> Void
+
 class ShopListManager {
     
+    // MARK: - Variables
     static let shared = ShopListManager()
-    
-    
     var shoppingItemsList : [String] = []
-    
     private let key = "shoppingItem_list"
     
+    // MARK: - Save Items
     private func saveItems() {
         let data = try? JSONEncoder().encode(shoppingItemsList)
         UserDefaults.standard.set(data, forKey: key)
     }
+    
+    // MARK: - Load Items
     func loadItems(completion: shopListCompletion) {
         guard
             let data = UserDefaults.standard.data(forKey: key),
@@ -32,11 +34,14 @@ class ShopListManager {
         completion()    
     }
     
+    // MARK: - Add Items
     func addItem(String text: String, completion: shopListCompletion) {
         shoppingItemsList.append(text)
         saveItems()
         completion()
     }
+    
+    // MARK: - RemoveItem
     func removeItem(at position: Int, completion: shopListCompletion) {
         shoppingItemsList.remove(at: position)
         saveItems()

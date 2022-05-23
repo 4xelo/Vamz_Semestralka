@@ -6,43 +6,43 @@
 //
 
 import UIKit
+import SwiftUI
 
-class FoodViewController: UIViewController, UICollectionViewDelegate{
+class FoodViewController: UIViewController{
 
-    @IBOutlet weak var RecipeCell: RecipeCell!
     
+    //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
+    
+    //MARK: - Variables
+    var recipes = [Recipe]()
+    
+    //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+            
         tableView.delegate = self
         tableView.dataSource = self
-
-        let recipeCell = UINib.init(nibName: "RecipeCell", bundle: nil)
-        self.tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
+                
+        let foodRecipeCell = UINib.init(nibName: "FoodRecipeCell", bundle: nil)
+        self.tableView.register(foodRecipeCell, forCellReuseIdentifier: "FoodRecipeCell")
         let headerView = UINib.init(nibName: "HeaderView", bundle: nil)
         self.tableView.register(headerView, forHeaderFooterViewReuseIdentifier: "HeaderView")
-      
-        //self.RecipeCell.foodImage 
     }
 }
+
+
+// MARK: - TableView data source 
 extension FoodViewController: UITableViewDataSource, UITableViewDelegate {
     
-    // MARK: - Table view data source
+  
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         return 260
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        //return CategoriesViewController.shared.recipeCategories.count()
-        return 0
+        return recipes.count
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -52,12 +52,9 @@ extension FoodViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeCell
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "FoodRecipeCell", for: indexPath) as! FoodRecipeCell
+        cell.textField.text = recipes[indexPath.row].title
         return cell
         }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-            
-    }
+    
 }

@@ -7,39 +7,34 @@
 
 import Foundation
 
-// MARK: - RecipeCategoryResponse
-struct RecipeCategoryResponse: Decodable {
-    let categories: [RecipeCategory]
+
+// MARK: - CategoryResponse
+struct CategoryResponse: Decodable {
+    let categories: [Category]
 }
 
-// MARK: - RecipeCategory
-struct RecipeCategory: Decodable {
+
+// MARK: - Category
+struct Category: Decodable {
     let title: String
 }
 
+
 // MARK: - RecipeResponse
 struct RecipeResponse: Codable {
-    let count: Int
     let recipes: [Recipe]
 }
+
 
 // MARK: - Recipe
 struct Recipe: Codable {
     let imageURL: String
-    let socialURL: Double
-    let publisher: String
-    let sourceURL: String
     let id: String
-    let publishedID: String
     let title: String
 
     enum CodingKeys: String, CodingKey {
         case imageURL = "imageUrl"
-        case socialURL = "socialUrl"
-        case publisher
-        case sourceURL = "sourceUrl"
         case id
-        case publishedID = "publishedId"
         case title
     }
 }

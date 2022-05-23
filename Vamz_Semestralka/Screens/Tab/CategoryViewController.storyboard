@@ -57,6 +57,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="categoryLabel" destination="tff-Hk-0WG" id="MYm-D0-ycp"/>
+                                            <segue destination="LY0-42-a3g" kind="showDetail" trigger="accessoryAction" id="Szq-Tb-U2G"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -95,6 +96,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZfQ-Le-b6W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="791" y="675"/>
+        </scene>
+        <!--FoodViewController-->
+        <scene sceneID="80d-2g-R0L">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="food" storyboardName="FoodViewController" id="LY0-42-a3g" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xm-Gn-31Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="847"/>
         </scene>
     </scenes>
     <resources>

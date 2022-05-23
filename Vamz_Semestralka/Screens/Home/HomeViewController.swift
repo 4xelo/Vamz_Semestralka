@@ -8,10 +8,15 @@
 import UIKit
 
 class HomeViewController: UIViewController{
-  
+    
+    //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
+    
+    //MARK: - Dummy Variables
     let sections = ["FEATURED RECIPES", "LATEST"]
     let items = [["Pasta"],["Chicken Breast","Pasta" , "Spagethi", "Risoto"]]
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,12 +25,13 @@ class HomeViewController: UIViewController{
         
         let recipeCell = UINib.init(nibName: "RecipeCell", bundle: nil)
         self.tableView.register(recipeCell, forCellReuseIdentifier: "RecipeCell")
+        
         let headerView = UINib.init(nibName: "HeaderView", bundle: nil)
         self.tableView.register(headerView, forHeaderFooterViewReuseIdentifier: "HeaderView")
     }
-
-    
 }
+
+//MARK: - TavleView Data source
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     
@@ -50,7 +56,5 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         headerView.headerLabel.text = sections[section]
         return headerView
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
+   
 }

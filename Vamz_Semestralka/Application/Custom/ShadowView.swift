@@ -14,6 +14,8 @@ class ShadowView: UIView {
         // Drawing code
         self.applyShadow()
     }
+    
+    // MARK: - Shadowing 
     func applyShadow() {
         self.layer.shadowColor = UIColor.darkGray.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 8)

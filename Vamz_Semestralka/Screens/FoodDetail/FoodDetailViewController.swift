@@ -9,6 +9,7 @@ import UIKit
 
 class FoodDetailViewController: UIViewController {
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Food Detail"

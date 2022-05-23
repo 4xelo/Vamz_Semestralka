@@ -12,26 +12,29 @@ import Alamofire
 //typealias FoodCompletionHandler = ((FoodResponse?,Error?)-> Void)
 class RequestManager {
     
+    // MARK: - Variables
     static let shared = RequestManager()  //singleton
     
-    func getCategoryData(completion: @escaping (Result<RecipeCategoryResponse, AFError>) -> Void) {
-        
+    // MARK: - Get Categories
+    func getCategoryData(completion: @escaping (Result<CategoryResponse, AFError>) -> Void) {
         let decoder = JSONDecoder()
         
         AF.request(Constants.Urls.recipeCategoryURL, method: .get, parameters: nil)
             .validate()
-            .responseDecodable(of: RecipeCategoryResponse.self, decoder: decoder) {
+            .responseDecodable(of: CategoryResponse.self, decoder: decoder) {
                 completion($0.result)
         }
     }
     
-    func getRecipeData(for parameters: RecipeRequest, completion: @escaping (Result<RecipeResponse, AFError>) -> Void) {
+    // MARK: - GetRecipes
+    func getRecipeData(for name: String, completion: @escaping (Result<RecipeResponse, AFError>) -> Void) {
         
         let decoder = JSONDecoder()
         
-        AF.request(Constants.Urls.recipeCategoryURL,method: .get,parameters: parameters)
+        AF.request(Constants.Urls.recipeByCategoryName(name),method: .get,parameters: nil)
             .validate()
             .responseDecodable(of: RecipeResponse.self,  decoder: decoder) {
+                print($0.result)
                 completion($0.result)
             }
         

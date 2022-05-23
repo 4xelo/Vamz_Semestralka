@@ -11,19 +11,30 @@ import SwiftUI
 
 
 
-class CategoriesViewController: UIViewController {
+class CategoriesViewController: UIViewController, UITableViewDelegate {
+    
+    //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    var categories = [RecipeCategory]()
-    var searchCategory = [RecipeCategory]()
+    
+    
+    //MARK: - Variables
+    var recipes = [Recipe]()
+    var categories = [Category]()
+    var searchCategory = [Category]()
     var searching = false
     
+    
+    
+    //MARK: - Lifecycles
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         populateCategory()
     }
+    
     
     func populateCategory(){
         RequestManager.shared.getCategoryData(){ [weak self] response in
@@ -39,11 +50,28 @@ class CategoriesViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
+    
+    
+    func populateRecipe(_ name: String) {
+        RequestManager.shared.getRecipeData(for: name) {[weak self] response in
+            guard let self = self else {return}
+            switch response{
+            case .success(let recipeData):
+                for recipe in recipeData.recipes {
+                    self.recipes.append(recipe)
+                }
+            case .failure(let error):
+                print(error)
+            }
+            self.tableView.reloadData()
+        }
+    }
+    
 }
 
     // MARK: - Table view data source
 
-    extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource{
+    extension CategoriesViewController: UITableViewDataSource{
         
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -66,16 +94,18 @@ class CategoriesViewController: UIViewController {
             return cell
         }
         
-        private func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) async -> Void{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
-            let vc = storyboard?.instantiateViewController(withIdentifier: "food") as! FoodViewController
-            navigationController?.pushViewController(vc, animated: true)
-           
-            vc.RecipeCell.foodNameLabel.text = cell.categoryLabel.text
-            
-        }
-    }
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            let text = categories[indexPath.row].title
 
+            populateRecipe(text)
+            let storyboard = UIStoryboard(name: "FoodViewController", bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "food") as? FoodViewController {
+                
+                navigationController?.pushViewController(vc, animated: true)
+            }
+    }
+}
+    //MARK: - Category Search
 extension CategoriesViewController: UISearchBarDelegate {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

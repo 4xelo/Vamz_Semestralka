@@ -7,12 +7,16 @@
 
 import UIKit
 
-class SListViewController: UIViewController, UITableViewDelegate{
+class SListViewController: UIViewController  {
 
+    // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Variable
     var lists = [String]()
     
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Shopping List"
@@ -28,6 +32,8 @@ class SListViewController: UIViewController, UITableViewDelegate{
         self.tableView.reloadData()
     }
 
+    
+    // MARK: - Action
     @IBAction func didTapAdd(_ sender: Any) {
 
         let alert = UIAlertController(title: "New Item", message: "Enter new shopping item", preferredStyle: .alert)
@@ -49,6 +55,8 @@ class SListViewController: UIViewController, UITableViewDelegate{
     }
 }
 
+
+// MARK: - TableView data source
 extension SListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         lists.count
@@ -62,6 +70,10 @@ extension SListViewController: UITableViewDataSource {
         return cell
     }
     
+}
+
+// MARK: - TableView delegate
+extension SListViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             lists.remove(at: indexPath.row)
@@ -71,5 +83,7 @@ extension SListViewController: UITableViewDataSource {
             }
         }
     }
+
+    
 }
 
