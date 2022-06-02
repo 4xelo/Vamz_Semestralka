@@ -34,7 +34,6 @@ class RequestManager {
         AF.request(Constants.Urls.recipeByCategoryName(name),method: .get,parameters: nil)
             .validate()
             .responseDecodable(of: RecipeResponse.self,  decoder: decoder) {
-                print($0.result)
                 completion($0.result)
             }
         

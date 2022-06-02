@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3j9-Ae-BzC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aIM-9j-Uvz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,7 @@
         <!--Food-->
         <scene sceneID="iER-dj-pAQ">
             <objects>
-                <viewController storyboardIdentifier="food" id="4hu-wd-fuJ" customClass="FoodViewController" customModule="Vamz_Semestralka" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FoodViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4hu-wd-fuJ" customClass="FoodViewController" customModule="Vamz_Semestralka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Ql-zv-Vve">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,28 +41,31 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Food" id="9cI-tI-hXD"/>
+                    <connections>
+                        <outlet property="tableView" destination="tku-yt-hBL" id="6R8-gF-lGT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PjV-yZ-EoQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1213.0434782608697" y="-133.25892857142856"/>
+            <point key="canvasLocation" x="2308.695652173913" y="-130.58035714285714"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="M5j-3b-wQo">
+        <scene sceneID="YGm-FF-Iln">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3j9-Ae-BzC" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aIM-9j-Uvz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pjz-id-uuU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cBf-cS-ypv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="4hu-wd-fuJ" kind="relationship" relationship="rootViewController" id="L7J-AH-Fl5"/>
+                        <segue destination="4hu-wd-fuJ" kind="relationship" relationship="rootViewController" id="zRK-7a-sWE"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QeI-1Z-iRH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I93-Yt-RqG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="302.89855072463769" y="-133.25892857142856"/>
+            <point key="canvasLocation" x="1398.5507246376812" y="-130.58035714285714"/>
         </scene>
     </scenes>
     <resources>

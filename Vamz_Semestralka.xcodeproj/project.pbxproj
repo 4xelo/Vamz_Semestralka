@@ -23,7 +23,6 @@
 		777B3D8B281EA8A800AAD21C /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777B3D8A281EA8A800AAD21C /* CategoryCell.swift */; };
 		77B7CD872822CE830060A610 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7CD862822CE830060A610 /* RequestManager.swift */; };
 		77B7CD8B2822D4290060A610 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7CD8A2822D4290060A610 /* CategoriesViewController.swift */; };
-		77B7CD8D282335240060A610 /* FoodId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7CD8C282335240060A610 /* FoodId.swift */; };
 		77B7CD8F2823C6950060A610 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7CD8E2823C6950060A610 /* FoodViewController.swift */; };
 		77B7CD99283046BA0060A610 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77B7CD9B283046BA0060A610 /* Localizable.strings */; };
 		77B7CDAC283071B10060A610 /* FoodViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B7CDAB283071B10060A610 /* FoodViewController.storyboard */; };
@@ -59,7 +58,6 @@
 		777B3D8A281EA8A800AAD21C /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		77B7CD862822CE830060A610 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		77B7CD8A2822D4290060A610 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
-		77B7CD8C282335240060A610 /* FoodId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodId.swift; sourceTree = "<group>"; };
 		77B7CD8E2823C6950060A610 /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		77B7CD9A283046BA0060A610 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		77B7CDAB283071B10060A610 /* FoodViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodViewController.storyboard; sourceTree = "<group>"; };
@@ -283,7 +281,6 @@
 			isa = PBXGroup;
 			children = (
 				77EBDDAF281DD3C5009C4477 /* ShadowView.swift */,
-				77B7CD8C282335240060A610 /* FoodId.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -401,7 +398,6 @@
 				77B7CD8F2823C6950060A610 /* FoodViewController.swift in Sources */,
 				777B3D77281E80B800AAD21C /* HeaderView.swift in Sources */,
 				77B7CD872822CE830060A610 /* RequestManager.swift in Sources */,
-				77B7CD8D282335240060A610 /* FoodId.swift in Sources */,
 				7739E6E4283836510078F01F /* ResponseStructs.swift in Sources */,
 				7739E6E8283837500078F01F /* Constants.swift in Sources */,
 				777B3D89281EA59400AAD21C /* FavoritesTableViewController.swift in Sources */,

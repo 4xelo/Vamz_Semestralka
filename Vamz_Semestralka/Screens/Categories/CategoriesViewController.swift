@@ -19,7 +19,6 @@ class CategoriesViewController: UIViewController, UITableViewDelegate {
     
     
     //MARK: - Variables
-    var recipes = [Recipe]()
     var categories = [Category]()
     var searchCategory = [Category]()
     var searching = false
@@ -33,6 +32,7 @@ class CategoriesViewController: UIViewController, UITableViewDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         populateCategory()
+       
     }
     
     
@@ -52,20 +52,6 @@ class CategoriesViewController: UIViewController, UITableViewDelegate {
     }
     
     
-    func populateRecipe(_ name: String) {
-        RequestManager.shared.getRecipeData(for: name) {[weak self] response in
-            guard let self = self else {return}
-            switch response{
-            case .success(let recipeData):
-                for recipe in recipeData.recipes {
-                    self.recipes.append(recipe)
-                }
-            case .failure(let error):
-                print(error)
-            }
-            self.tableView.reloadData()
-        }
-    }
     
 }
 
@@ -96,13 +82,16 @@ class CategoriesViewController: UIViewController, UITableViewDelegate {
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             let text = categories[indexPath.row].title
-
-            populateRecipe(text)
+    
             let storyboard = UIStoryboard(name: "FoodViewController", bundle: nil)
-            if let vc = storyboard.instantiateViewController(withIdentifier: "food") as? FoodViewController {
+            if let foodNavigationController = storyboard.instantiateInitialViewController() as? UINavigationController,
+                let foodViewController = foodNavigationController.topViewController as? FoodViewController
+                {
+                foodViewController.loadRecipes(text)
+                foodViewController.title = text
+                present(foodNavigationController, animated: true)
                 
-                navigationController?.pushViewController(vc, animated: true)
-            }
+                }
     }
 }
     //MARK: - Category Search
