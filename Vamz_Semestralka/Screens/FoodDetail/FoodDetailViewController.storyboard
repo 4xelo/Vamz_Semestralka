@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Food Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="FoodDetailViewController" customModule="Vamz_Semestralka" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJj-hj-G5g">
+                                <rect key="frame" x="20" y="64" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDb-sJ-Pyt">
+                                <rect key="frame" x="20" y="122.5" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="tsn-DC-BBh">
+                                <rect key="frame" x="20" y="169" width="374" height="673"/>
+                                <string key="placeholder">["1 cup butter, divided", "1 onion, minced", "1 tablespoon minced garlic", "1 (15 ounce) can tomato sauce", "3 cups heavy cream", "2 teaspoons salt", "1 teaspoon cayenne pepper", "1 teaspoon garam masala", "&amp;nbsp;", "1 1/2 pounds skinless, boneless chicken breast, cut into bite-sized chunks", "2 tablespoons vegetable oil", "2 tablespoons tandoori masala"]</string>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uJj-hj-G5g" secondAttribute="trailing" constant="20" id="ExR-ma-NrZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aDb-sJ-Pyt" secondAttribute="trailing" constant="20" id="FhE-Nm-l1o"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tsn-DC-BBh" secondAttribute="trailing" constant="20" id="JZ8-hZ-kzy"/>
+                            <constraint firstItem="uJj-hj-G5g" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="PpQ-1I-1fS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="tsn-DC-BBh" secondAttribute="bottom" constant="20" id="ZBV-9G-p3B"/>
+                            <constraint firstItem="tsn-DC-BBh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="bWq-Nt-wPO"/>
+                            <constraint firstItem="aDb-sJ-Pyt" firstAttribute="top" secondItem="uJj-hj-G5g" secondAttribute="bottom" constant="20" id="e9f-R4-dsm"/>
+                            <constraint firstItem="aDb-sJ-Pyt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="fRf-md-4U0"/>
+                            <constraint firstItem="tsn-DC-BBh" firstAttribute="top" secondItem="aDb-sJ-Pyt" secondAttribute="bottom" constant="20" id="qV1-aA-sSR"/>
+                            <constraint firstItem="uJj-hj-G5g" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="qjj-5g-JIn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ingredientsTextField" destination="tsn-DC-BBh" id="7x5-Fo-8tE"/>
+                        <outlet property="publisherLabel" destination="aDb-sJ-Pyt" id="IRZ-BM-PPt"/>
+                        <outlet property="titleLabel" destination="uJj-hj-G5g" id="5SY-AY-zTl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98.550724637681171" y="46.875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

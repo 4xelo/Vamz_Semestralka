@@ -15,7 +15,7 @@ class RequestManager {
     // MARK: - Variables
     static let shared = RequestManager()  //singleton
     
-    // MARK: - Get Categories
+    // MARK: - GetCategories
     func getCategoryData(completion: @escaping (Result<CategoryResponse, AFError>) -> Void) {
         let decoder = JSONDecoder()
         
@@ -36,9 +36,18 @@ class RequestManager {
             .responseDecodable(of: RecipeResponse.self,  decoder: decoder) {
                 completion($0.result)
             }
-        
     }
-
+    
+    //MARK: - GetFoodaData
+    func getFoodDetailData(for id: String, completion: @escaping (Result<FoodDetailResponse,AFError>) -> Void) {
+        let decoder = JSONDecoder()
+        
+        AF.request(Constants.Urls.foodDetailById(id),method: .get, parameters: nil)
+            .validate()
+            .responseDecodable(of: FoodDetailResponse.self, decoder: decoder) {
+                completion($0.result)
+            }
+    }
 }
 
     

@@ -35,7 +35,7 @@ class CategoriesViewController: UIViewController, UITableViewDelegate {
        
     }
     
-    
+    //MARK: - Naplnenie Categories
     func populateCategory(){
         RequestManager.shared.getCategoryData(){ [weak self] response in
             guard let self = self else {return}

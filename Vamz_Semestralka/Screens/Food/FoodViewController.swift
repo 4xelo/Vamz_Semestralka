@@ -32,6 +32,7 @@ class FoodViewController: UIViewController{
         tableView.reloadData()
     }
     
+    //MARK: - Recipe loading
     func loadRecipes(_ name: String) {
         RequestManager.shared.getRecipeData(for: name) {[weak self] response in
            
@@ -48,6 +49,9 @@ class FoodViewController: UIViewController{
             self.tableView.reloadData()
         }
     }
+    
+    
+    //MARK: - Image
     func chooseImage(_ index: Int) -> String{
         
         var imageUrl: String
@@ -105,11 +109,29 @@ extension FoodViewController: UITableViewDataSource, UITableViewDelegate {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "FoodRecipeCell", for: indexPath) as! FoodRecipeCell
         cell.textField.text = recipes[indexPath.row].title
         cell.typeLabel.text = recipes[indexPath.row].id
+        //cell.imageV.loadFrom(URLAddress: recipes[indexPath.row].imageURL)
         let imageName = chooseImage(indexPath.row)
         cell.imageV.loadFrom(URLAddress: imageName)
         
         return cell
         }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let id = recipes[indexPath.row].id
+
+        let storyboard = UIStoryboard(name: "FoodDetailViewController", bundle: nil)
+
+        if let foodDetailViewController = storyboard.instantiateInitialViewController() as? FoodDetailViewController {
+            foodDetailViewController.loadFoodDetail(id)
+            navigationController?.pushViewController(foodDetailViewController, animated: true)
+        }
+        
+        
+        
+        
+        
+        
+    }
     
 }
 
