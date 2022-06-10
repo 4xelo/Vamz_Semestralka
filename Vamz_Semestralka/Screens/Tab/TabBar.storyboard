@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qsP-pr-f15">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qsP-pr-f15">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,23 +26,12 @@
                     <connections>
                         <segue destination="Tgx-Cy-dIn" kind="relationship" relationship="viewControllers" id="whn-Lr-d1G"/>
                         <segue destination="eLk-kq-Gai" kind="relationship" relationship="viewControllers" id="7bp-UN-9bi"/>
-                        <segue destination="HcC-en-cfQ" kind="relationship" relationship="viewControllers" id="HKC-jm-zl4"/>
                         <segue destination="9Vg-bH-lKP" kind="relationship" relationship="viewControllers" id="Csk-jh-h4g"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPN-7u-oqG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-820" y="-187"/>
-        </scene>
-        <!--favoritesSection-->
-        <scene sceneID="wDx-dS-ad6">
-            <objects>
-                <viewControllerPlaceholder storyboardName="FavoritesTableViewController" referencedIdentifier="favoritesSection" id="HcC-en-cfQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="suit.heart.fill" catalog="system" selectedImage="suit.heart.fill" id="No2-fw-Zig"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QBE-gq-mN9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-614" y="293"/>
         </scene>
         <!--SListViewController-->
         <scene sceneID="iYs-ey-wD8">
@@ -79,6 +68,5 @@
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="square.fill.text.grid.1x2" catalog="system" width="128" height="100"/>
-        <image name="suit.heart.fill" catalog="system" width="128" height="109"/>
     </resources>
 </document>

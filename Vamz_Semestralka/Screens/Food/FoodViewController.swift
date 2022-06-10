@@ -107,7 +107,7 @@ extension FoodViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "FoodRecipeCell", for: indexPath) as! FoodRecipeCell
-        cell.textField.text = recipes[indexPath.row].title
+        cell.nameLabel.text = recipes[indexPath.row].title
         cell.typeLabel.text = recipes[indexPath.row].id
         //cell.imageV.loadFrom(URLAddress: recipes[indexPath.row].imageURL)
         let imageName = chooseImage(indexPath.row)
@@ -125,12 +125,6 @@ extension FoodViewController: UITableViewDataSource, UITableViewDelegate {
             foodDetailViewController.loadFoodDetail(id)
             navigationController?.pushViewController(foodDetailViewController, animated: true)
         }
-        
-        
-        
-        
-        
-        
     }
     
 }

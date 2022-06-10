@@ -13,8 +13,8 @@ class HomeViewController: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Dummy Variables
-    let sections = ["FEATURED RECIPES", "LATEST"]
-    let items = [["Pasta"],["Chicken Breast","Pasta" , "Spagethi", "Risoto"]]
+    let sections = ["LATEST"]
+    let items = [["Chicken Breast","Pasta" , "Spagethi", "Risoto"]]
     
     //MARK: - Lifecycle
     override func viewDidLoad() {

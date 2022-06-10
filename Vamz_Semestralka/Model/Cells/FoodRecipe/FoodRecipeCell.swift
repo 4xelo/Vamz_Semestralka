@@ -11,8 +11,8 @@ class FoodRecipeCell: UITableViewCell {
     
     // MARK: - Outlets
     @IBOutlet weak var imageV: UIImageView!
-    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     // MARK: - Lifecycle
     override func awakeFromNib() {

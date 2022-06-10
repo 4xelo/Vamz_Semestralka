@@ -22,8 +22,11 @@ struct Constants {
         static func foodDetailById(_ id: String) -> URL {
             return URL(string: "https://recipesapi.herokuapp.com/api/get?rId=\(id)")!
         }
-        
     }
+    
+    
+    
+    
     struct FoodImages {
         //MARK: - ChickenImageUrls
         static let chickenImages = ["https://imgs.search.brave.com/CwHC33u_UrGIbJHGJwIYGzYpklZV4IchKcIPxGfHbns/rs:fit:1000:1000:1/g:ce/aHR0cHM6Ly9rZXZp/bmlzY29va2luZy5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjAvMDUvQmFrZWQt/VGV4LU1leC1DaGlj/a2VuLXNxdWFyZS5q/cGc",
