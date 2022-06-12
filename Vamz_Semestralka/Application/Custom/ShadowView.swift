@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Vlastna trieda viewu, dekorativny prvok, ktory vytvori efekt tiena pod hlavnym viewom
 class ShadowView: UIView {
 
 

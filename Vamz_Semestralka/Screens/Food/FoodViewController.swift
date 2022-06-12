@@ -9,7 +9,6 @@ import UIKit
 import SwiftUI
 
 class FoodViewController: UIViewController{
-
     
     //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -23,7 +22,6 @@ class FoodViewController: UIViewController{
         
         tableView.delegate = self
         tableView.dataSource = self
-        
         
         let foodRecipeCell = UINib.init(nibName: "FoodRecipeCell", bundle: nil)
         self.tableView.register(foodRecipeCell, forCellReuseIdentifier: "FoodRecipeCell")
@@ -49,7 +47,6 @@ class FoodViewController: UIViewController{
             self.tableView.reloadData()
         }
     }
-    
     
     //MARK: - Image
     func chooseImage(_ index: Int) -> String{
@@ -89,8 +86,6 @@ class FoodViewController: UIViewController{
 // MARK: - TableView data source 
 extension FoodViewController: UITableViewDataSource, UITableViewDelegate {
     
-  
-
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 260
     }
@@ -118,15 +113,28 @@ extension FoodViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let id = recipes[indexPath.row].id
-
+        _ =  tableView.dequeueReusableCell(withIdentifier: "FoodRecipeCell", for: indexPath) as! FoodRecipeCell
+        
+        let countTime = Constants.RecipeThings.timeCount.count
+        let countServ = Constants.RecipeThings.servingsCount.count
+        let countDiff = Constants.RecipeThings.difficulty.count
+        
+        
+        let time = Constants.RecipeThings.timeCount[indexPath.row % countTime]
+        let servings = Constants.RecipeThings.servingsCount[indexPath.row % countServ]
+        let difficulty = Constants.RecipeThings.difficulty[indexPath.row % countDiff]
+        
+        let item = Latest.init(image: chooseImage(indexPath.row),categoryP: recipeCategory, timeP: time,difficultyP: difficulty, servings: servings, idP: id)
+        HistoryManager.shared.addItem(item) { 
+        }
+        
+        
         let storyboard = UIStoryboard(name: "FoodDetailViewController", bundle: nil)
-
         if let foodDetailViewController = storyboard.instantiateInitialViewController() as? FoodDetailViewController {
             foodDetailViewController.loadFoodDetail(id)
             navigationController?.pushViewController(foodDetailViewController, animated: true)
         }
     }
-    
 }
 
 extension UIImageView {

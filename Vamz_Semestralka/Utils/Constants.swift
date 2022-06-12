@@ -9,6 +9,13 @@ import Foundation
 
 struct Constants {
     
+    
+    struct RecipeThings {
+        
+        static let servingsCount = [2,4,5,6,8]
+        static let timeCount = [30,45,60,75,90]
+        static let difficulty = ["Easy","Medium","Hard"]
+    }
     struct Urls {
         
         // MARK: - Category URL
@@ -23,9 +30,6 @@ struct Constants {
             return URL(string: "https://recipesapi.herokuapp.com/api/get?rId=\(id)")!
         }
     }
-    
-    
-    
     
     struct FoodImages {
         //MARK: - ChickenImageUrls

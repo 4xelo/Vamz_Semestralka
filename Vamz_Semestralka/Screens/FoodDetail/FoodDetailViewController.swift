@@ -63,7 +63,4 @@ extension FoodDetailViewController: UITableViewDataSource {
         return cell
     }
     
-    
-    
-    
 }

@@ -30,14 +30,8 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="kbm-5v-0KJ">
                             <rect key="frame" x="16" y="146" width="311" height="72"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbB-r1-FKt">
-                                    <rect key="frame" x="0.0" y="0.0" width="31" height="13"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrb-fg-nRv">
-                                    <rect key="frame" x="0.0" y="22" width="41.5" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="41.5" height="42.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -125,11 +119,11 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="difficultyLabel" destination="mSe-UB-rWy" id="Vip-7W-aDN"/>
                 <outlet property="foodImage" destination="XPr-9G-QBI" id="BGD-1V-k9Q"/>
                 <outlet property="foodNameLabel" destination="wrb-fg-nRv" id="bFJ-Az-DC8"/>
                 <outlet property="servingsLabel" destination="gKR-jj-bDF" id="1KB-kO-P0E"/>
                 <outlet property="timeLabel" destination="cpu-z0-Jat" id="Bxr-Bp-Wqu"/>
-                <outlet property="typeLabel" destination="hbB-r1-FKt" id="bV9-sh-TAH"/>
             </connections>
             <point key="canvasLocation" x="94.927536231884062" y="-63.616071428571423"/>
         </view>
