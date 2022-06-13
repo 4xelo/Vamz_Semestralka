@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Prvky RecipeCelly.
 struct Latest: Codable {
     var id : String
     var imageUrl: String

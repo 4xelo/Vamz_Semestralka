@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 
+/// Trieda ma na starosti UI elementy obrazovky FoodViewController.storyboard
 class FoodViewController: UIViewController{
     
     //MARK: - Outlets
@@ -17,6 +18,8 @@ class FoodViewController: UIViewController{
     var recipes = [Recipe]()
     var recipeCategory = String()
     //MARK: - Life cycle
+    ///Metoda je volana po tom, ako sa nacita view z viewControllera, v metode sa nastavi
+    ///tableView, tableViewCell a headerView
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +34,8 @@ class FoodViewController: UIViewController{
     }
     
     //MARK: - Recipe loading
+    /// Metoda nacita recepty z api.
+    /// - Parameter name: nazov konkretnej kategorie, ktoru chceme nacitat
     func loadRecipes(_ name: String) {
         RequestManager.shared.getRecipeData(for: name) {[weak self] response in
            
@@ -49,6 +54,9 @@ class FoodViewController: UIViewController{
     }
     
     //MARK: - Image
+    /// Metoda vyberie obrazok, ktory sa ulozi, nakolko obrazky ktore taham z api su uz neni ulozene na povodnej stranke, tak som to musel takto obist.
+    /// - Parameter index: pozicia obrazka.
+    /// - Returns: vrati string s url daneho obrazka.
     func chooseImage(_ index: Int) -> String{
         
         var imageUrl: String
@@ -86,20 +94,40 @@ class FoodViewController: UIViewController{
 // MARK: - TableView data source 
 extension FoodViewController: UITableViewDataSource, UITableViewDelegate {
     
+    /// Metoda vrati vysku ktoru by mal mat riadok v desatinnych cislach
+    /// - Parameters:
+    ///   - tableView: Objekt tableView, ktory ziada tuto informaciu.
+    ///   - indexPath: Index sekcie.
+    /// - Returns: Nezapornu hodnotu s pohyblivou desatinnou ciarkou, ktora urcuje vysku ktoru by mal mat riadok.
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 260
     }
     
+    /// Metoda vracia pocet riadkov
+    /// - Parameters:
+    ///   - tableView: Objekt tableView, ktory ziada tuto informaciu.
+    ///   - section:  Index sekcie.
+    /// - Returns: pocet riadkov
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.count
     }
     
+    /// Poziada delegata o view, ktory sa ma zobrazit v hlavicke zadanej casti zobrazenia tabulky.
+    /// - Parameters:
+    ///   - tableView: Objekt tableView, ktory ziada tuto informaciu.
+    ///   - section: Cislo sekcie obsahujuce zobrazenie hlavicky.
+    /// - Returns: Objekt ktory dedi z UIViewu.
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as! HeaderView
         headerView.headerLabel.text = "Food"
         return headerView
     }
     
+    /// Metoda si od zdroja pyta cellu, s zamerom aby ju mohla umiestnit na urcite miesto v tableView.
+    /// - Parameters:
+    ///   - tableView: Objekt tableView, ktory ziada tuto informaciu.
+    ///   - indexPath: Index sekcie.
+    /// - Returns: Objekt, ktory dedi z UITableViewCell.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "FoodRecipeCell", for: indexPath) as! FoodRecipeCell
         cell.nameLabel.text = recipes[indexPath.row].title
@@ -111,6 +139,10 @@ extension FoodViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
         }
     
+    /// Metoda po zakliknuti na konkretnu recept zobrazi storyboard FoodDetailViewControlleru.
+    /// - Parameters:
+    ///   - tableView: Objekt tableView, ktory ziada tuto informaciu.
+    ///   - indexPath: Index sekcie.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let id = recipes[indexPath.row].id
         _ =  tableView.dequeueReusableCell(withIdentifier: "FoodRecipeCell", for: indexPath) as! FoodRecipeCell
@@ -125,8 +157,7 @@ extension FoodViewController: UITableViewDataSource, UITableViewDelegate {
         let difficulty = Constants.RecipeThings.difficulty[indexPath.row % countDiff]
         
         let item = Latest.init(image: chooseImage(indexPath.row),categoryP: recipeCategory, timeP: time,difficultyP: difficulty, servings: servings, idP: id)
-        HistoryManager.shared.addItem(item) { 
-        }
+        HistoryManager.shared.addItem(item)
         
         
         let storyboard = UIStoryboard(name: "FoodDetailViewController", bundle: nil)
@@ -139,6 +170,8 @@ extension FoodViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension UIImageView {
     
+    /// Metoda nacita obrazok zo zadanej URLAdresy.
+    /// - Parameter URLAddress: string url adresy obrazka.
     func loadFrom(URLAddress: String) {
         guard let url = URL(string: URLAddress) else { return }
         

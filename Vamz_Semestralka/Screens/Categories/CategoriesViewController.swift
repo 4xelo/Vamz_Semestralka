@@ -70,11 +70,11 @@ class CategoriesViewController: UIViewController, UITableViewDelegate {
             }
         }
         
-        /// <#Description#>
+        /// Metoda si od zdroja pyta cellu, s zamerom aby ju mohla umiestnit na urcite miesto v tableView. V metode sa vytvori CategoryCell, ktora je nasledne naplnena hodnotami a vratena.
         /// - Parameters:
         ///   - tableView: Objekt tableView, ktory ziada tuto informaciu.
         ///   - indexPath: Index sekcie.
-        /// - Returns: <#description#>
+        /// - Returns: Objekt, ktory dedi z UITableViewCell.
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
             
@@ -87,7 +87,7 @@ class CategoriesViewController: UIViewController, UITableViewDelegate {
             return cell
         }
         
-        /// <#Description#>
+        /// Metoda po zakliknuti na konkretnu kategoriu zobrazi storyboard FoodViewControlleru.
         /// - Parameters:
         ///   - tableView: Objekt tableView, ktory ziada tuto informaciu.
         ///   - indexPath: Index sekcie.
@@ -108,18 +108,18 @@ class CategoriesViewController: UIViewController, UITableViewDelegate {
     //MARK: - Category Search
 extension CategoriesViewController: UISearchBarDelegate {
     
-    /// <#Description#>
+    /// Metoda zacne filtrovat vyhladavane prvky pomocou zadaneho textu.
     /// - Parameters:
-    ///   - searchBar: <#searchBar description#>
-    ///   - searchText: <#searchText description#>
+    ///   - searchBar: Objekt searchBar, ktory ziada tuto funkciu.
+    ///   - searchText: Vyhladavany text.
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchCategory = categories.filter({$0.title.lowercased().prefix(searchText.count) == searchText.lowercased()})
         searching = true
         tableView.reloadData()
     }
     
-    /// <#Description#>
-    /// - Parameter searchBar: <#searchBar description#>
+    /// Metoda zrusi vyhladavanie pomocou tlacitka.
+    /// - Parameter searchBar:  Objekt searchBar, ktory ziada tuto funkciu.
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searching = false
         searchBar.text = ""

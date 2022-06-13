@@ -8,7 +8,7 @@
 import UIKit
 
 @main
-///Main,  trieda ktora spusta program
+///Main,  trieda ktora spusta program.
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?

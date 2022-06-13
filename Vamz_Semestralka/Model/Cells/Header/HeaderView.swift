@@ -7,9 +7,10 @@
 
 import UIKit
 
+
+/// Trieda ma na starosti UI elementy HeaderViewu.
 class HeaderView: UITableViewHeaderFooterView {
 
-    
     //MARK: - Outlets
     @IBOutlet weak var headerLabel: UILabel!
 }

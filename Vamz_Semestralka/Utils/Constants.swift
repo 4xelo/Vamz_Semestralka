@@ -7,15 +7,18 @@
 
 import Foundation
 
+/// Struct konstant, ktore vyuzivam v aplikacii.
 struct Constants {
     
     
+    /// Jednotlve hodnoty ktore moze nadobudat RecipeCella v HomeViewControllery.
     struct RecipeThings {
         
         static let servingsCount = [2,4,5,6,8]
         static let timeCount = [30,45,60,75,90]
         static let difficulty = ["Easy","Medium","Hard"]
     }
+    /// Url z ktorych taham jednotlive api.
     struct Urls {
         
         // MARK: - Category URL
@@ -31,6 +34,7 @@ struct Constants {
         }
     }
     
+    /// Obrazky v jednotlivych cellach.
     struct FoodImages {
         //MARK: - ChickenImageUrls
         static let chickenImages = ["https://imgs.search.brave.com/CwHC33u_UrGIbJHGJwIYGzYpklZV4IchKcIPxGfHbns/rs:fit:1000:1000:1/g:ce/aHR0cHM6Ly9rZXZp/bmlzY29va2luZy5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjAvMDUvQmFrZWQt/VGV4LU1leC1DaGlj/a2VuLXNxdWFyZS5q/cGc",

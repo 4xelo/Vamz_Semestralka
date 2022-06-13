@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Trieda ma na starosti UI elementy obrazovky SListViewController.storyboard
 class SListViewController: UIViewController  {
 
     // MARK: - Outlets
@@ -17,6 +18,7 @@ class SListViewController: UIViewController  {
     
     
     // MARK: - Lifecycle
+    /// Metoda je volana po tom, ako sa nacita view z viewControllera, v metode sa nastavi tableView a zoznam: lists
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Shopping List"
@@ -27,6 +29,7 @@ class SListViewController: UIViewController  {
         tableView.dataSource = self
         
     }
+    /// Metoda priradi zoznamu lists prvky z UserDefaults: shoppingListItems a obnovi tableView.
     private func refreshTableView() {
         self.lists = ShopListManager.shared.shoppingItemsList
         self.tableView.reloadData()
@@ -34,6 +37,8 @@ class SListViewController: UIViewController  {
 
     
     // MARK: - Action
+    ///   Metoda prida do UserDefaults novu polozku.
+    /// - Parameter sender: Objekt volajuci tuto funkciu.
     @IBAction func didTapAdd(_ sender: Any) {
 
         let alert = UIAlertController(title: "New Item", message: "Enter new shopping item", preferredStyle: .alert)
@@ -58,10 +63,20 @@ class SListViewController: UIViewController  {
 
 // MARK: - TableView data source
 extension SListViewController: UITableViewDataSource {
+    /// Metoda vracia pocet riadkov.
+    /// - Parameters:
+    ///   - tableView: Objekt tableView, ktory ziada tuto informaciu.
+    ///   - section: Index sekcie.
+    /// - Returns: pocet riadkov.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         lists.count
     }
     
+    /// Metoda si od zdroja pyta cellu, s zamerom aby ju mohla umiestnit na urcite miesto v tableView.
+    /// - Parameters:
+    ///   - tableView: Objekt tableView, ktory ziada tuto informaciu.
+    ///   - indexPath: Index sekcie.
+    /// - Returns:  Objekt, ktory dedi z UITableViewCell.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
@@ -74,6 +89,11 @@ extension SListViewController: UITableViewDataSource {
 
 // MARK: - TableView delegate
 extension SListViewController : UITableViewDelegate {
+    /// Metoda vymaze prvok z userDefaults.
+    /// - Parameters:
+    ///   - tableView: Objekt tableView, ktory ziada tuto informaciu.
+    ///   - editingStyle: Editovaci styl celly.
+    ///   - indexPath: Index sekcie.
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             lists.remove(at: indexPath.row)

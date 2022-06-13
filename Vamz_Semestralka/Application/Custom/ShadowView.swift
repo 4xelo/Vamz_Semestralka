@@ -16,7 +16,8 @@ class ShadowView: UIView {
         self.applyShadow()
     }
     
-    // MARK: - Shadowing 
+    // MARK: - Shadowing
+    /// Metoda vykresli view tak ze aplikuje tienovanie.
     func applyShadow() {
         self.layer.shadowColor = UIColor.darkGray.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 8)
